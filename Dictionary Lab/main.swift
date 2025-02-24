@@ -26,13 +26,14 @@ var practiceDictionary = ["rigmarole": "a lengthy and complicated procedure"]
 print("\n PROBLEM 1.0 : CREATE YOUR OWN \n")
 //Create a dictionary called mappingIntegers that that maps an integer (1) to its English word (one). And print it.
 
- 
+var mappingIntegers : [ Int : String] = [ 1 : "one"]
+print(mappingIntegers)
  
  
 print("\n PROBLEM 1.1  : TYPE OF DICTIONARY \n")
 //Add a comment describing the type of the dictionary you just made, explain why it is that type. Simple. Read and print the comment below.
 
- 
+print("The type of dictionary is [Int:String] the key is an integer and the valve is a string. This disctionary is a shorthand type of dictionary. I created this type of dictionary so it can map the integer to its english word.")
  
  
 print("\n PROBLEM 2.0 : ADVANCED DICTIONARY \n")
@@ -40,50 +41,51 @@ print("\n PROBLEM 2.0 : ADVANCED DICTIONARY \n")
 //Then print favoriteWords.
 //Use the words cumulative, mnemonic, and satire. 
 
- 
- 
+var favoriteWords : [ String : String ] = [ " cumulative " : "increase of growing by accumulation or successive additions" , "menmonic" : "something intended to assist the memory" , "satire" : "the use od irony,sarcasm,ridicule,or the like" ]
+ print(favoriteWords)
  
  
 print("\n PROBLEM 2.0.1 : WHAT HAPPENED IN 2.0? \n")
 //Print out what happened after running 2.0.
- 
- 
+print("after running 2.0...")
 print("\n PROBLEM 2.0.2 : ACCESSING A DICTIONARY THROUGH A KEY \n")
  //The way we can access a dictionary and store it to a variable is by accessing the KEY ["..."] of the dictionary, this will take the associated VALUE with the inputted KEY ["..."]
 //Access practiceDictionary with the key rigmarole and store it to new variable called practice. Then print practice.
  //Ignore the yellow warning for now. Notice the results and go to 2.0.3
- 
- 
- 
+var practice = practiceDictionary["rigmarole"]
+print(practice)
 print("\n PROBLEM 2.0.3 : STATE RESULT OF 2.0.2 \n")
 //Record the result of 2.0.2 from the console below in a print statement. Don't worry if you don't understand it yet. 
+print("it printed nil")
 
  print("The console says Optional (a lengthy and complicated procedure)")
  
 print("\n PROBLEM 2.1.0 : ACCESSING DICTIONARY DATA \n")
 // Access the the value (.values) you created in Problem 2.0 and print it out. Observe the result in the console.
-
+favoriteWords.values
+print(favoriteWords.values)
  
  
 print("\n PROBLEM 2.1.1 : WHAT HAPPENED IN 2.1 \n")
 // Print out what happened when you ran 2.1.0
- 
+ print("it printed the definitions of each word")
  
 print("\n PROBLEM 2.2 : DATA TYPE OF DICTIONARY \n")
 //what is the type of the outputted variable from Problem 2.1.0? Was it what you expected. Print out your answer with full sentences.
 //Don't kill yourself over this answer. Just try.
  
- 
+ print("it printed out the type steinf (the definitions) ")
  
 print("\n PROBLEM 2.3.0 : COUNTING ITEMS IN THE DICTIONARY \n")
 // Use built in dictionary methods to count the amount of elements in the dictionary you created in Problem 2.1. Print it using the .count attribute. Observe the result and continue.
 
- 
+favoriteWords.count
+print(favoriteWords.count)
  
 print("\n PROBLEM 2.3.1 : WHAT HAPPENED IN 2.3.0? \n")
 //Print out what resulted in 2.3.0 and why that result.
  print("The number 3 printed out indicating there are three items in the dictionary.")
-
+print("it printed out the number of words that we had to define")
  
 print(" \n PROBLEM 2.4 : ITERATING THROUGH THE DICTIONARY \n")
 // Using a for-in loop, print only the values of the dictionary you created in Problem 2.0.
@@ -93,23 +95,25 @@ print(" \n PROBLEM 2.4 : ITERATING THROUGH THE DICTIONARY \n")
 //Also, when you print the value in the action braces, ADD a line to each value by including the code:   + "\n"
  // "\n" just means to add a line.
  //Ignore yellow warning.
- 
+for(key,Value) in favoriteWords {
+    print(Value+"\n")
+}
 
  
  
 print("\n PROBLEM 2.4.1 : WHAT HAPPENED IN 2.4?")
 //Print out what happened when you ran 2.4.
- 
+ print("it printed out the deinitions spaced out.")
  
  
  print(" \n PROBLEM 2.5.0 : REMOVING ITEMS FROM DICTIONARY \n")
 // Use the built in dictionary method to remove all current items from your dictionary that you created in Problem 2.0. Print it out and observe the results.
-
- 
+favoriteWords.removeAll()
+print(favoriteWords.removeAll())
  
 print("\n PROBLEM 2.5.1 : WHAT HAPPENED TO 2.5.0? \n")
 //Print out what happened in 2.5.0 and what it indicates.
-
+print("it printted out brackets")
  print("Square brackets appeared with a colon inside. This indicates an empty dictionary.")
  
  
